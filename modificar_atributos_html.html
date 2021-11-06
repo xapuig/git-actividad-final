@@ -19,14 +19,50 @@
         <a class="nav-link" href="modificar_estilos_css.html">Modificar estilos CSS</a>
         <a class="nav-link" href="modificar_atributos_html.html">Modificar atributos HTML</a>
     </nav>
+
+    <html>
+
+    <body>
+        <p>Cambiando los atributos de un elemento mediante JavaScript podemos conseguir cosas como esta, haz click en la bombilla para ver que sucede. </p>
+        <!-- onclick event is generated
+        and it calls turnOnOff function -->
+        <!-- OFFbulb.jpg is the turn off bulb image -->
+        <img id="Image" onclick="turnOnOff()" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
+
+        
+
+        <script>
+            // implementation of turnOnOff function -->
+            function turnOnOff() {
+                // taking image in image variable
+                var image = document.getElementById('Image');
+
+                //Match the image name
+                //whether it is ONbulb or OFFbulb
+                //change image to OFFbulb.jpg if
+                //it match with ONbulb otherwise
+                //change it to ONbulb.jpg -->
+                if (image.src.match("ONbulb"))
+                    image.src = "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+                else {
+                    image.src = "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+                    document.getElementById("texto_principal").innerText = "Al alterar el atributo src de un elemento image conseguimos cambiar la imagen cada vez que se hace click";
+                }     
+            }
+        </script>
+        <p id="texto_principal"></p>
+    </body>
+
+    </html>
 </body>
 <footer class="bg-white">
-  
-  <!-- Copyrights -->
-  <div class="bg-light py-4">
-    <div class="container text-center">
-      <p class="text-muted mb-0 py-2">© 2021 Curso de JavaScript.</p>
+
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+        <div class="container text-center">
+            <p class="text-muted mb-0 py-2">© 2021 Curso de JavaScript.</p>
+        </div>
     </div>
-  </div>
 </footer>
+
 </html>
