@@ -19,14 +19,29 @@
         <a class="nav-link" href="modificar_estilos_css.html">Modificar estilos CSS</a>
         <a class="nav-link" href="modificar_atributos_html.html">Modificar atributos HTML</a>
     </nav>
+    <h2>¿Qué se puede hacer con JavaScript?</h2>
+
+    <p id="demo">Con JavaScript podemos alterar el contenido HTML.</p>
+
+
+    <button type="button" onclick='turnOnOff()'>Haz click!</button>
+    <p id="texto_principal"></p>
+    <script>
+
+        function turnOnOff() {
+            document.getElementById("demo").style.backgroundColor = "purple";
+            document.getElementById("texto_principal").innerText = "Al hacer click en el botón cambiamos el estilo de CSS del elemento, en este caso se le ha asignado un fondo morado";
+        }
+    </script>
 </body>
 <footer class="bg-white">
-  
-  <!-- Copyrights -->
-  <div class="bg-light py-4">
-    <div class="container text-center">
-      <p class="text-muted mb-0 py-2">© 2021 Curso de JavaScript.</p>
+
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+        <div class="container text-center">
+            <p class="text-muted mb-0 py-2">© 2021 Curso de JavaScript.</p>
+        </div>
     </div>
-  </div>
 </footer>
+
 </html>
